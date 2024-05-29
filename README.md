@@ -1,4 +1,4 @@
-Enhanced User Journey Flow for a WhatsApp Bus Booking Bot with Limited Typing
+Enhanced User Journey Flow 
 Greeting and Introduction
 
 Bot: "Hello! Welcome to [Your Bus Service]. I'm here to help you book your bus tickets. How can I assist you today?"

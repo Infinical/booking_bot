@@ -1,73 +1,87 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+Enhanced User Journey Flow for a WhatsApp Bus Booking Bot with Limited Typing
+Greeting and Introduction
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Bot: "Hello! Welcome to [Your Bus Service]. I'm here to help you book your bus tickets. How can I assist you today?"
+User: Selects a button:
+Button 1: "Book a Ticket"
+Button 2: "Get Help"
+Request for Trip Details (Departure)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Bot: "Great! Where are you traveling from?"
+Interactive List Message (example options):
+Option 1: "New York"
+Option 2: "Los Angeles"
+Option 3: "Chicago"
+Option 4: "Houston"
+User: Selects "New York"
+Request for Destination
 
-## Description
+Bot: "Where are you traveling to?"
+Interactive List Message (example options):
+Option 1: "Boston"
+Option 2: "San Francisco"
+Option 3: "Miami"
+Option 4: "Seattle"
+User: Selects "Boston"
+Request for Travel Date
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Bot: "On what date would you like to travel? Please choose a date from the options below or type the date in YYYY-MM-DD format."
+Interactive Message with Buttons:
+Button 1: "Today"
+Button 2: "Tomorrow"
+Button 3: "Pick a Date"
+User: Selects "Pick a Date" (if necessary, enters "2024-06-15")
+Request for Number of Passengers
 
-## Installation
+Bot: "How many passengers will be traveling? Please choose from the options below."
+Interactive Message with Quick Replies:
+Quick Reply 1: "1"
+Quick Reply 2: "2"
+Quick Reply 3: "3"
+Quick Reply 4: "4+"
+User: Selects "2"
+Display Available Buses
 
-```bash
-$ npm install
-```
+Bot: "Here are the available buses from New York to Boston on 2024-06-15:"
+Interactive List Message (example options):
+Option 1: "Bus A - Departure: 08:00 AM, Arrival: 12:00 PM, Price: $30"
+Option 2: "Bus B - Departure: 01:00 PM, Arrival: 05:00 PM, Price: $35"
+Option 3: "Bus C - Departure: 06:00 PM, Arrival: 10:00 PM, Price: $32"
+Prompt: "Please select the bus you'd like to book."
+User: Selects "Bus A"
+Confirm Details
 
-## Running the app
+Bot: "You have selected Bus A - Departure: 08:00 AM, Arrival: 12:00 PM, Price: $30. Please confirm your booking details below:"
+Interactive Message with Buttons:
+Button 1: "Confirm"
+Button 2: "Cancel"
+User: Selects "Confirm"
+Request for Payment Method
 
-```bash
-# development
-$ npm run start
+Bot: "How would you like to pay for your ticket? Please choose a payment method."
+Interactive Message with Buttons:
+Button 1: "Credit Card"
+Button 2: "PayPal"
+Button 3: "Other"
+User: Selects "Credit Card"
+Payment Details
 
-# watch mode
-$ npm run start:dev
+Bot: "Please enter your credit card details to complete the payment."
+User enters credit card details (this is the only significant typing required).
+Booking Confirmation
 
-# production mode
-$ npm run start:prod
-```
+Bot: "Thank you! Your ticket has been successfully booked. Here are your booking details:"
+Interactive Message with Booking Information:
+"Bus A - Departure: 08:00 AM, Arrival: 12:00 PM, Price: $30"
+"Passenger(s): 2"
+"Travel Date: 2024-06-15"
+Bot: "Would you like to receive your ticket via email or WhatsApp?"
+Interactive Message with Buttons:
+Button 1: "Email"
+Button 2: "WhatsApp"
+User: Selects "WhatsApp"
+Send Ticket
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Bot: "Your ticket has been sent to you via WhatsApp. Have a safe journey!"
+Interactive Media Message:
+Sends a PDF or image of the ticket.

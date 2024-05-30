@@ -6,14 +6,14 @@ export class BookingFlowService {
   private messagebird: MessageBird;
 
   constructor() {
-    this.messagebird = initClient('');
+    this.messagebird = initClient('eEwHy0fBi8mC6pAHVTKCKINyv');
   }
 
   async createWebhook() {
     const params = {
       events: ['message.created'],
       channelId: '3d206122-4d8c-4bb0-a701-2b8294cd57ac',
-      url: 'http://157.230.32.67/bot/booking-flow/create-webhook',
+      url: 'https://whatsappbotquick-669d3a9dc608.herokuapp.com/booking-flow/create-webhook',
     };
 
     await this.messagebird.conversations.webhooks.create(

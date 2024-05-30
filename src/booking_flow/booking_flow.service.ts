@@ -6,7 +6,7 @@ export class BookingFlowService {
   private messagebird: MessageBird;
 
   constructor() {
-    this.messagebird = initClient('QJPfiCCP6z47JmPWxDE3VFNS3');
+    this.messagebird = initClient('');
   }
 
   async createWebhook() {

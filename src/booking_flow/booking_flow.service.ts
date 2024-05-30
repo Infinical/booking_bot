@@ -94,6 +94,7 @@ export class BookingFlowService {
             from,
             'Please visit our website or contact customer support for assistance.',
           );
+          delete this.userSessions[from];
         }
         break;
       case 2:

@@ -13,7 +13,7 @@ export class BookingFlowService {
     const params = {
       events: ['message.created'],
       channelId: '3d206122-4d8c-4bb0-a701-2b8294cd57ac',
-      url: 'https://f14d-41-80-112-194.ngrok-free.app/booking-flow/create-webhook',
+      url: 'http://157.230.32.67/bot/booking-flow/create-webhook',
     };
 
     await this.messagebird.conversations.webhooks.create(
